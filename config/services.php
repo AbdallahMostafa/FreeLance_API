@@ -21,7 +21,8 @@ return [
     'facebook' => [
     'client_id' => '483783128843592',
     'client_secret' => '8b15a8c94337e841bacecf2e58aef745',
-    'redirect' => 'http://localhost:8000/callback',
+    'default_graph_version' => 'v2.12',
+    'redirect' => 'http://localhost:8000/login/facebook/callback',
     ],
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
