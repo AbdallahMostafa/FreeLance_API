@@ -26,16 +26,16 @@ class SocialAuthGoogleController extends Controller
 
 
           if($existUser) {
-              Auth::loginUsingId($existUser->id);
+              Auth::login($existUser, true);
           }
           else {
               $user = new User;
               $user->name = $googleUser->name;
               $user->email = $googleUser->email;
-              $user->google_id = $googleUser->id;
+              $user->token = $googleUser->token;
               $user->password = md5(rand(1,10000));
               $user->save();
-              Auth::loginUsingId($user->id);
+              Auth::login($user,true);
           }
           return redirect()->to('/home');
       }

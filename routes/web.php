@@ -23,6 +23,7 @@ Route::get('/login/facebook', 'Auth\LoginController@redirectToFacebookProvider')
 Route::get('/login/facebook/callback', 'Auth\LoginController@handleProviderFacebookCallback');
 
 
+
 Route::get('/googleredirect', 'SocialAuthGoogleController@redirect');
 Route::get('/googlecallback', 'SocialAuthGoogleController@callback');
 
